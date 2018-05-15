@@ -4,11 +4,10 @@ Sample application for the Urban Airship SDK.
 
 ## Setup
 
-1) Copy [airshipconfig.properties.sample](src/main/assets/airshipconfig.properties.sample) to `airshipconfig.properites` in
+Copy [airshipconfig.properties.sample](src/main/assets/airshipconfig.properties.sample) to `airshipconfig.properites` in
 the assets directory.
 
-2) Update `airshipconfig.properties` with your application's config.
-
-3) Configure a push provider:
-- [Amazon setup docs](http://docs.urbanairship.com/reference/push-providers/adm.html#set-up-adm)
-- [GCM setup docs](http://docs.urbanairship.com/reference/push-providers/gcm.html#android-gcm-setup)
+Setup:
+- Update `airshipconfig.properties` with your application's config.
+- [Add Firebase to your app](https://firebase.google.com/docs/android/setup#add_firebase_to_your_app).
+- Optionally, add ADM - [Amazon setup docs](https://docs.urbanairship.com/platform/push-providers/adm/)

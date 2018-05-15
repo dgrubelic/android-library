@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    style="@style/UrbanAirship.InAppModal.Content.HeaderBodyMedia"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/heading"
+        style="@style/UrbanAirship.InAppModal.Heading.HeaderBodyMedia"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/body"
+        style="@style/UrbanAirship.InAppModal.Body.HeaderBodyMedia"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:text="Body text"/>
+
+    <com.urbanairship.iam.view.MediaView
+        android:id="@+id/media"
+        style="@style/UrbanAirship.InAppModal.MediaView.HeaderBodyMedia"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:src="@drawable/ua_ic_image_placeholder"/>
+
+</LinearLayout>
+
+

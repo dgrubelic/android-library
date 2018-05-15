@@ -18,27 +18,25 @@ One of our engineers will verify receipt of the agreement before approving your 
 ## Requirements
 - minSdkVersion 16+
 - compileSdkVersion 27
-- Google Play Services 11.8.0+
+- Google Play Services 15.0.0+
 
 ## Quickstart
 
-Include Urban Airship into the build.gradle file:
+1) Include Urban Airship into the build.gradle file:
 
 ```
    dependencies {
      ...
 
-     // Urban Airship SDK
-     compile 'com.urbanairship.android:urbanairship-sdk:9.0.5'
-     compile 'com.google.android.gms:play-services-gcm:11.8.0'
-
-     // Recommended for location services
-     compile 'com.google.android.gms:play-services-location:11.8.0'
+     // Urban Airship SDK - FCM
+     implementation 'com.urbanairship.android:urbanairship-fcm:9.1.0'
+     implementation 'com.google.firebase:firebase-messaging:15.0.0'
    }
 ```
 
+2) [Add Firebase to your app](https://firebase.google.com/docs/android/setup#add_firebase_to_your_app).
 
-Create a new `airshipconfig.properties` file with your application’s settings:
+3) Create a new `airshipconfig.properties` file with your application’s settings:
 
 ```
    developmentAppKey = Your Development App Key
@@ -55,9 +53,6 @@ Create a new `airshipconfig.properties` file with your application’s settings:
    developmentLogLevel = DEBUG
    productionLogLevel = ERROR
 
-   # FCM Sender ID
-   fcmSenderId = Your Google API Project Number
-
    # Notification customization
    notificationIcon = ic_notification
    notificationAccentColor = #ff0000
@@ -66,7 +61,7 @@ Create a new `airshipconfig.properties` file with your application’s settings:
    notificationChannel = "customChannel"
 ```
 
-Set the Autopilot meta-data in the AndroidManifest.xml file:
+4) Set the Autopilot meta-data in the AndroidManifest.xml file:
 
 ```
       <meta-data android:name="com.urbanairship.autopilot"
